@@ -1,6 +1,7 @@
 # Basic-Docker-Compose-Build
-Node.js &amp; Redis
- + ## docker-Compose.yml
++ Node.js &amp; Redis
++ Generates a webpage that displays a number that goes up everytime you refresh the page.
+ + ## docker-Compose.yml (Format = Explanation -> Text/command)
     + Specify version of docker-composd:
       + version: '3'
     + Telling the docker-compose file what you would like it to do:
@@ -13,7 +14,7 @@ Node.js &amp; Redis
           + node-app:
             + Use dockerfile in the current directory for the image ((build) Dockerfile must be present):
               + build: .
-            + Specifiy ports to opem im container:
+            + Specifiy ports to open in container:
               + ports:
                 + detail ports (stars with a hyphen to specify an array):
                   + - '4001:8081'
@@ -29,9 +30,9 @@ Node.js &amp; Redis
           + Placement is important
       + RUN npm install
       + RUN npm install -g npm@8.4.0
-        + As of 1/29/22)
+        + As of (1/29/22)
       + COPY ./ ./
-        + COPY <src-path> <destination-path>
+        + Copies source path to destination path
     + Default command
       + CMD ["npm", "start"]
   + ## index.js
